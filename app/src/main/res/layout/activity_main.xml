@@ -6,13 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_error"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="#CE5B56"
+        android:text="Error Log"
+        app:layout_constraintBottom_toTopOf="@id/btn_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_info"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#A7B922"
+        android:text="Info Log"
+        app:layout_constraintBottom_toTopOf="@id/btn_debug"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_error" />
+
+    <Button
+        android:id="@+id/btn_debug"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#305D78"
+        android:text="Debug Log"
+        app:layout_constraintBottom_toTopOf="@id/btn_verbose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_info" />
+
+    <Button
+        android:id="@+id/btn_verbose"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D5D5D5"
+        android:text="Verbose Log"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_debug" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
